@@ -1,6 +1,6 @@
 # SPEC 01 — Home con feed de la guardería
 
-> **Estado:** Borrador
+> **Estado:** Aprobado
 > **Depende de:** Ninguno
 > **Fecha:** 2026-10-26
 > **Objetivo:** Reemplazar el home de Next por una réplica estática y fiel del prototipo `references/pantallas/feed.dc.html`, sin autenticación ni base de datos.
@@ -126,13 +126,13 @@ Convenciones:
 
 ## Riesgos identificados
 
-| Riesgo                                                        | Mitigación                                                                                                |
-| ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `next/font/google` requiere red en build o primer arranque    | Ejecutar el build con conexión; si falla, documentar el error y no cambiar de estrategia sin aprobación.   |
-| Los valores arbitrarios de Tailwind pueden desviarse del prototipo | Contrastar medidas, colores y sombras contra el HTML de referencia y la captura a 924×540.            |
-| La captura de referencia solo cubre los primeros 540 px       | Validar el resto del feed con el HTML del prototipo, que es la fuente de verdad.                          |
-| La fecha "martes 17 jun" queda obsoleta                       | Es contenido mock explícito; una fecha real requiere su propia spec.                                      |
-| Los enlaces no interactivos pueden parecer rotos              | Mantener el estilo visual del prototipo y marcar los elementos con `aria-disabled`.                       |
+| Riesgo                                                             | Mitigación                                                                                               |
+| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| `next/font/google` requiere red en build o primer arranque         | Ejecutar el build con conexión; si falla, documentar el error y no cambiar de estrategia sin aprobación. |
+| Los valores arbitrarios de Tailwind pueden desviarse del prototipo | Contrastar medidas, colores y sombras contra el HTML de referencia y la captura a 924×540.               |
+| La captura de referencia solo cubre los primeros 540 px            | Validar el resto del feed con el HTML del prototipo, que es la fuente de verdad.                         |
+| La fecha "martes 17 jun" queda obsoleta                            | Es contenido mock explícito; una fecha real requiere su propia spec.                                     |
+| Los enlaces no interactivos pueden parecer rotos                   | Mantener el estilo visual del prototipo y marcar los elementos con `aria-disabled`.                      |
 
 ## Lo que **no** está en este spec
 

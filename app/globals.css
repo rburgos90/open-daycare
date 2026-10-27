@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-nunito);
+  --font-display: var(--font-fredoka);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  /* Surfaces */
+  --color-canvas: #f6ecdf;
+  --color-surface: #fffdf9;
+  --color-line: #ece0d0;
+  --color-line-soft: #f0e6d8;
+  --color-line-strong: #e7dac8;
+
+  /* Text */
+  --color-ink: #3f362e;
+  --color-ink-soft: #4a4038;
+  --color-muted: #a89a8b;
+  --color-muted-strong: #94887b;
+  --color-nav: #6e6359;
+
+  /* Brand */
+  --color-accent: #d9583c;
+  --color-accent-strong: #c5503a;
+  --color-accent-soft: #fbe3d8;
+  --color-avatar: #f2937a;
+  --color-logo-from: #f8c3a8;
+  --color-logo-to: #f2937a;
+  --color-cta-from: #f4977e;
+  --color-cta-to: #ee8164;
+
+  /* Post kinds */
+  --color-achievement-bg: #cfebd8;
+  --color-achievement-fg: #3e9b6c;
+  --color-activity-bg: #c7e7f1;
+  --color-activity-fg: #2e89a6;
+  --color-announcement-bg: #ccd8f4;
+  --color-announcement-fg: #4e72c8;
+
+  /* Photo placeholder */
+  --color-photo-bg: #f4ece1;
+  --color-photo-line: #dbcdba;
+  --color-photo-fg: #b0a290;
+
+  /* Scrollbar */
+  --color-scrollbar: #e4d6c4;
+
+  /* Shadows */
+  --shadow-card: 0 4px 16px -12px rgb(120 90 60 / 0.5);
+  --shadow-composer: 0 4px 14px -10px rgb(120 90 60 / 0.4);
+  --shadow-cta: 0 8px 18px -8px rgb(238 129 100 / 0.75);
+}
+
+@layer base {
+  html {
+    height: 100%;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    min-height: 100%;
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar);
+    border-radius: 8px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
 }
