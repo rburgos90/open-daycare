@@ -44,7 +44,7 @@ export type LinkedParent = {
 };
 
 export type Child = {
-  id: string; // slug ASCII: "mateo", "sofia", …
+  id: number; // id numérico: 1–8 en orden del prototipo
   name: string;
   initial: string;
   avatarColor: AvatarColor;
@@ -65,7 +65,7 @@ Paleta de `Avatar` (mapa en `Avatar.tsx`): `blue` #A9D9E8/#1F7A93, `pink` #F4B8C
 
 Convenciones:
 
-- Los ocho ids, en el orden del prototipo: `mateo`, `sofia`, `benjamin`, `valentina`, `tomas`, `emma`, `lucas`, `olivia`.
+- Los ocho ids numéricos, en el orden del prototipo: Mateo `1`, Sofía `2`, Benjamín `3`, Valentina `4`, Tomás `5`, Emma `6`, Lucas `7`, Olivia `8`.
 - Mateo es el único con datos literales del prototipo: nacimiento "12 mar 2022", ingreso "feb 2025", nota de alergia al maní, Lucía Fernández (Mamá, activa, `purple`) y Diego Fernández (Papá, pendiente, `sky`).
 - Los otros siete reciben literales inventados coherentes: fechas plausibles, padres con nombres propios en español y colores sólidos de la paleta. Valentina no tiene padres (`parents: []`).
 - Alergias solo en Mateo (`Maní`) y Tomás (`Lactosa`): el listado del prototipo solo muestra esos dos badges.
@@ -81,7 +81,7 @@ Convenciones:
 4. Crear `app/_components/ChildCard.tsx` (avatar, nombre, sub-línea, lógica de badge/chevron, hover) y `app/_components/ParentList.tsx` (filas de padres y "Vincular otro padre"). Verificación: `npx tsc --noEmit` pasa.
 5. Modificar `app/_components/Sidebar.tsx`: prop requerida `active: "feed" | "kids"`, Feed y Niños como `Link` reales con `aria-current` dinámico, Avisos y Mi cuenta siguen `aria-disabled`; `app/page.tsx` pasa `active="feed"`. Verificación: `/` se ve idéntico a SPEC 01.
 6. Crear `app/kids/page.tsx`: layout de dos columnas (máximo 880 px), header, buscador visual, separador y grilla con `ChildCard`. Verificación: `/kids` muestra las ocho tarjetas y la sidebar marca Niños activo.
-7. Crear `app/kids/[id]/page.tsx`: `generateStaticParams` desde `children`, `notFound()` para ids desconocidos, `generateMetadata` con el nombre, "Volver a Niños" a `/kids`, columnas del perfil, caja de alergias condicional, detalles y columna derecha. Verificación: `/kids/mateo` reproduce el prototipo y un id inexistente da 404.
+7. Crear `app/kids/[id]/page.tsx`: `generateStaticParams` desde `children`, `notFound()` para ids desconocidos, `generateMetadata` con el nombre, "Volver a Niños" a `/kids`, columnas del perfil, caja de alergias condicional, detalles y columna derecha. Verificación: `/kids/1` reproduce el prototipo y un id inexistente da 404.
 8. Pasada de fidelidad visual contra `references/pantallas/ninos.dc.html` y `perfil-nino.dc.html`: medidas, colores, sombras, radios y tipografías. Verificación: comparación a 924×540 y revisión a 1440 de ancho.
 
 ## Criterios de aceptación
@@ -97,13 +97,13 @@ Convenciones:
 - [ ] En `/kids` la sidebar marca "Niños" activo (`#FBE3D8` / `#D9583C`); en `/` marca "Feed".
 - [ ] `/` no sufre ninguna regresión visual respecto de SPEC 01.
 - [ ] "Volver a Niños" navega a `/kids`.
-- [ ] `/kids/mateo` muestra el avatar M de 84 px, "Mateo Fernández", "3 años · Sala Soles" y el botón "Editar" no interactivo.
+- [ ] `/kids/1` muestra el avatar M de 84 px, "Mateo Fernández", "3 años · Sala Soles" y el botón "Editar" no interactivo.
 - [ ] La caja "Alergias y notas" reproduce el texto del prototipo y solo aparece en niños con alergia.
 - [ ] La tarjeta de detalles muestra "12 mar 2022", "Soles" y "feb 2025".
 - [ ] "Resumen del día" se ve con fondo `#3F362E` y "Vincular otro padre" no navega.
 - [ ] "PADRES VINCULADOS" muestra a Lucía con badge ACTIVA y a Diego con PENDIENTE.
 - [ ] El perfil de Valentina no muestra filas de padres y conserva "Vincular otro padre".
-- [ ] Un id inexistente (p. ej. `/kids/pepe`) devuelve 404.
+- [ ] Un id inexistente (p. ej. `/kids/99`) devuelve 404.
 - [ ] Las pestañas se titulan "Niños · OpenDayCare" y "<Nombre> · OpenDayCare".
 - [ ] Ningún componente nuevo usa `"use client"` ni handlers de eventos.
 - [ ] No aparece scroll horizontal no intencional a 924×540 ni a 1440 de ancho.
