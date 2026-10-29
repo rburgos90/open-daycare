@@ -32,8 +32,10 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Spec workflow
 
-- Large features go through the `spec` skill (`/spec`), then `spec-impl` (`/spec-impl NN-slug`). Specs live in `specs/NN-slug.md` (the folder does not exist yet); implementation requires a status meaning Approved and creates branch `spec-NN-slug`.
+- Large features go through the `spec` skill (`/spec`), then `spec-impl` (`/spec-impl NN-slug`). Specs live in `specs/NN-slug.md`; implementation requires a status meaning Approved and creates branch `spec-NN-slug`.
 - `/spec` writes no code. `/spec-impl` pauses for diff review after each plan step. Do not commit or otherwise change git state unless the user explicitly asks.
+- Verify a spec's acceptance criteria with the `spec-verifier` agent (`.opencode/agent/spec-verifier.md`) — invoke it with the spec number or slug (`01`, `01-feed-home`) when asked to verificar / validar / checkear a spec. It verifies each criterion with evidence (code reads, command output, Playwright screenshots in `.playwright-mcp/`, Context7 docs), applies minimal fixes for failures, re-verifies, and marks the checkboxes in the spec.
+- `spec-verifier` never commits or changes git state, and never edits the spec's Estado or criterion text; moving a fully-passed spec to "Implementado" is a human decision.
 
 ## Tools
 
