@@ -49,13 +49,13 @@ export default function Home() {
             <span className="flex-1 text-[15px] text-muted">
               Compartí un momento…
             </span>
-            <span className="flex h-[38px] w-[38px] items-center justify-center rounded-[12px] bg-accent-soft text-[#E0654A]">
+            <span className="flex h-[38px] w-[38px] items-center justify-center rounded-[12px] bg-accent-soft text-like">
               <CameraIcon />
             </span>
           </span>
 
           <div className="mb-3.5 flex items-center gap-3.5">
-            <span className="text-[12.5px] font-extrabold tracking-[.8px] text-[#8A7C6D]">
+            <span className="text-[12.5px] font-extrabold tracking-[.8px] text-caption">
               PUBLICADO HOY
             </span>
             <span className="h-px flex-1 bg-line-strong" aria-hidden="true" />

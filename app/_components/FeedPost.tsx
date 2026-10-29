@@ -35,7 +35,7 @@ function HeartIcon() {
       width="19"
       height="19"
       viewBox="0 0 24 24"
-      fill="#E0654A"
+      fill="currentColor"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
@@ -106,7 +106,7 @@ function PhotoIcon() {
 function AuthorAvatar({ author }: { author: FeedAuthor }) {
   if (author.kind === "child") {
     return (
-      <span className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#A9D9E8] font-display text-[17px] font-semibold text-[#1F7A93]">
+      <span className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-child-bg font-display text-[17px] font-semibold text-child-fg">
         {author.initial}
       </span>
     );
@@ -155,7 +155,7 @@ export default function FeedPost({ post }: FeedPostProps) {
             className={`h-2 w-2 rounded-full ${kind.dotClassName}`}
             aria-hidden="true"
           />
-          <span className="text-xs font-extrabold tracking-[.5px]">
+          <span className="text-[12px] font-extrabold tracking-[.5px]">
             {kind.label}
           </span>
         </span>
@@ -169,13 +169,13 @@ export default function FeedPost({ post }: FeedPostProps) {
       {post.photo ? <PhotoPlaceholder alt={post.photo.alt} /> : null}
 
       <footer className="mt-4 flex items-center gap-[18px] border-t border-line-soft pt-3.5">
-        <span className="flex items-center gap-[7px] text-sm font-bold text-[#E0654A]">
+        <span className="flex items-center gap-[7px] text-[14px] font-bold text-like">
           <HeartIcon />
           {post.likes}
         </span>
         <span
           aria-disabled="true"
-          className="flex items-center gap-[7px] text-sm font-bold text-muted-strong"
+          className="flex items-center gap-[7px] text-[14px] font-bold text-muted-strong"
         >
           <CommentIcon />
           {post.comments}
@@ -183,7 +183,7 @@ export default function FeedPost({ post }: FeedPostProps) {
         <span className="flex-1" aria-hidden="true" />
         <span
           aria-disabled="true"
-          className="text-sm font-extrabold text-accent-strong"
+          className="text-[14px] font-extrabold text-accent-strong"
         >
           Editar
         </span>

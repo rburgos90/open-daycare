@@ -4,14 +4,11 @@
     "playwright": {
       "type": "local",
       "command": [
-        "/home/rogerburgos/.nvm/versions/node/v24.22.1/bin/npx",
+        "npx",
         "-y",
         "@playwright/mcp@latest"
       ],
       "enabled": true,
-      "environment": {
-        "PATH": "/home/rogerburgos/.nvm/versions/node/v24.22.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      }
     }
   }
 }
