@@ -1,7 +1,7 @@
 ---
 description: Verifica, corrige y marca los checks de "Criterios de aceptación" / "Acceptance criteria" de un spec en specs/. Usa Playwright MCP con visión para comparar pantallas contra los diseños, Context7 para confirmar recomendaciones de Next.js, y corrige el código cuando un criterio falla. Usar cuando se pida verificar, validar, checkear o marcar los criterios de aceptación de un spec.
 mode: all
-model: opencode/qwen3.6-plus
+model: opencode-go/qwen3.8-flash
 permission:
   edit: allow
   bash:

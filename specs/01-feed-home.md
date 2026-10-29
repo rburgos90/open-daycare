@@ -1,6 +1,6 @@
 # SPEC 01 — Home con feed de la guardería
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** Ninguno
 > **Fecha:** 2026-10-26
 > **Objetivo:** Reemplazar el home de Next por una réplica estática y fiel del prototipo `references/pantallas/feed.dc.html`, sin autenticación ni base de datos.
@@ -86,23 +86,23 @@ Convenciones:
 
 ## Criterios de aceptación
 
-- [ ] `/` muestra el feed y no queda ningún texto ni imagen del starter de Next.
-- [ ] No existe ningún componente con `"use client"`, handler de eventos ni llamada a `fetch`.
-- [ ] El fondo general es `#F6ECDF` y la sidebar es `#FFFDF9` con borde derecho `#ECE0D0`.
-- [ ] La sidebar mide 248 px, queda fija y ocupa el alto del viewport.
-- [ ] El contenido principal tiene un ancho máximo de 760 px y se centra.
-- [ ] "Feed" se ve como ítem activo con fondo `#FBE3D8` y texto `#D9583C`.
-- [ ] Se leen exactamente "Buenas, Caro", "12 niños · martes 17 jun" y "Compartí un momento…".
-- [ ] Se muestran las tres publicaciones en orden: LOGRO, ACTIVIDAD y ANUNCIO.
-- [ ] Los contadores visibles son 3/1, 5/2 y 8/0.
-- [ ] La publicación de actividad muestra el placeholder punteado "Foto · pintando con témperas".
-- [ ] Los títulos, avatares y nombres usan Fredoka; el cuerpo usa Nunito.
-- [ ] Los íconos son SVG inline; no se agregó ninguna dependencia al `package.json`.
-- [ ] Los enlaces a pantallas inexistentes no navegan a rutas rotas.
-- [ ] A 924×540 y a 1440 de ancho no aparece scroll horizontal no intencional.
-- [ ] El documento tiene `lang="es"` y el título "OpenDayCare · Sala Soles".
-- [ ] `npm run lint`, `npx tsc --noEmit` y `npm run build` terminan sin errores.
-- [ ] La consola del navegador no muestra errores ni advertencias de hidratación.
+- [x] `/` muestra el feed y no queda ningún texto ni imagen del starter de Next.
+- [x] No existe ningún componente con `"use client"`, handler de eventos ni llamada a `fetch`.
+- [x] El fondo general es `#F6ECDF` y la sidebar es `#FFFDF9` con borde derecho `#ECE0D0`.
+- [x] La sidebar mide 248 px, queda fija y ocupa el alto del viewport.
+- [x] El contenido principal tiene un ancho máximo de 760 px y se centra.
+- [x] "Feed" se ve como ítem activo con fondo `#FBE3D8` y texto `#D9583C`.
+- [x] Se leen exactamente "Buenas, Caro", "12 niños · martes 17 jun" y "Compartí un momento…".
+- [x] Se muestran las tres publicaciones en orden: LOGRO, ACTIVIDAD y ANUNCIO.
+- [x] Los contadores visibles son 3/1, 5/2 y 8/0.
+- [x] La publicación de actividad muestra el placeholder punteado "Foto · pintando con témperas".
+- [x] Los títulos, avatares y nombres usan Fredoka; el cuerpo usa Nunito.
+- [x] Los íconos son SVG inline; no se agregó ninguna dependencia al `package.json`.
+- [x] Los enlaces a pantallas inexistentes no navegan a rutas rotas.
+- [x] A 924×540 y a 1440 de ancho no aparece scroll horizontal no intencional.
+- [x] El documento tiene `lang="es"` y el título "OpenDayCare · Sala Soles".
+- [x] `npm run lint`, `npx tsc --noEmit` y `npm run build` terminan sin errores.
+- [x] La consola del navegador no muestra errores ni advertencias de hidratación.
 
 ## Decisiones tomadas y descartadas
 
