@@ -47,6 +47,25 @@
   --color-photo-line: #dbcdba;
   --color-photo-fg: #b0a290;
 
+  /* Badges */
+  --color-badge-allergy-bg: #fbd8cc;
+  --color-badge-allergy-fg: #d9684a;
+  --color-badge-link-bg: #f9d2de;
+  --color-badge-link-fg: #c56486;
+  --color-badge-active-bg: #cfebd8;
+  --color-badge-active-fg: #3e9b6c;
+  --color-badge-pending-bg: #f7e7a6;
+  --color-badge-pending-fg: #9a7b1e;
+
+  /* Allergy box */
+  --color-allergy-box-bg: #fbdad6;
+  --color-allergy-box-icon-bg: #f4a8a0;
+  --color-allergy-box-title: #c5413a;
+  --color-allergy-box-text: #b25249;
+
+  /* Card hover */
+  --color-card-hover-border: #f2a78e;
+
   /* Scrollbar */
   --color-scrollbar: #e4d6c4;
 
@@ -73,6 +92,18 @@
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  input {
+    font-family: inherit;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  ::placeholder {
+    color: #b6a99b;
   }
 
   ::-webkit-scrollbar {
