@@ -1,6 +1,6 @@
 # SPEC 02 — Niños: listado y perfil
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** SPEC 01
 > **Fecha:** 2026-10-29
 > **Objetivo:** Agregar las rutas `/kids` (listado) y `/kids/[id]` (perfil) como réplicas estáticas y fieles de `ninos.dc.html` y `perfil-nino.dc.html`, con datos mock completos para los ocho niños de la sala.
@@ -86,29 +86,29 @@ Convenciones:
 
 ## Criterios de aceptación
 
-- [ ] `/kids` muestra "GESTIÓN", el título "Niños" y el botón "Agregar niño" con el gradiente del prototipo.
-- [ ] El buscador se ve con el placeholder "Buscar niño…" y no filtra ni navega.
-- [ ] El separador muestra "SALA SOLES" y "8 niños".
-- [ ] La grilla tiene dos columnas y las ocho tarjetas en el orden del prototipo.
-- [ ] Cada tarjeta navega a `/kids/<id>` del niño que muestra.
-- [ ] Mateo muestra el badge MANÍ, Tomás LACTOSA, Valentina VINCULAR y el resto el chevron.
-- [ ] Las sub-líneas de padres coinciden con el prototipo ("2 padres vinculados", "1 padre vinculado", "sin padres vinculados").
-- [ ] El hover de la tarjeta cambia el borde a `#F2A78E` y eleva 2 px, solo con CSS.
-- [ ] En `/kids` la sidebar marca "Niños" activo (`#FBE3D8` / `#D9583C`); en `/` marca "Feed".
-- [ ] `/` no sufre ninguna regresión visual respecto de SPEC 01.
-- [ ] "Volver a Niños" navega a `/kids`.
-- [ ] `/kids/1` muestra el avatar M de 84 px, "Mateo Fernández", "3 años · Sala Soles" y el botón "Editar" no interactivo.
-- [ ] La caja "Alergias y notas" reproduce el texto del prototipo y solo aparece en niños con alergia.
-- [ ] La tarjeta de detalles muestra "12 mar 2022", "Soles" y "feb 2025".
-- [ ] "Resumen del día" se ve con fondo `#3F362E` y "Vincular otro padre" no navega.
-- [ ] "PADRES VINCULADOS" muestra a Lucía con badge ACTIVA y a Diego con PENDIENTE.
-- [ ] El perfil de Valentina no muestra filas de padres y conserva "Vincular otro padre".
-- [ ] Un id inexistente (p. ej. `/kids/99`) devuelve 404.
-- [ ] Las pestañas se titulan "Niños · OpenDayCare" y "<Nombre> · OpenDayCare".
-- [ ] Ningún componente nuevo usa `"use client"` ni handlers de eventos.
-- [ ] No aparece scroll horizontal no intencional a 924×540 ni a 1440 de ancho.
-- [ ] `npm run lint`, `npx tsc --noEmit` y `npm run build` terminan sin errores.
-- [ ] La consola del navegador no muestra errores ni advertencias de hidratación.
+- [x] `/kids` muestra "GESTIÓN", el título "Niños" y el botón "Agregar niño" con el gradiente del prototipo.
+- [x] El buscador se ve con el placeholder "Buscar niño…" y no filtra ni navega.
+- [x] El separador muestra "SALA SOLES" y "8 niños".
+- [x] La grilla tiene dos columnas y las ocho tarjetas en el orden del prototipo.
+- [x] Cada tarjeta navega a `/kids/<id>` del niño que muestra.
+- [x] Mateo muestra el badge MANÍ, Tomás LACTOSA, Valentina VINCULAR y el resto el chevron.
+- [x] Las sub-líneas de padres coinciden con el prototipo ("2 padres vinculados", "1 padre vinculado", "sin padres vinculados").
+- [x] El hover de la tarjeta cambia el borde a `#F2A78E` y eleva 2 px, solo con CSS.
+- [x] En `/kids` la sidebar marca "Niños" activo (`#FBE3D8` / `#D9583C`); en `/` marca "Feed".
+- [x] `/` no sufre ninguna regresión visual respecto de SPEC 01.
+- [x] "Volver a Niños" navega a `/kids`.
+- [x] `/kids/1` muestra el avatar M de 84 px, "Mateo Fernández", "3 años · Sala Soles" y el botón "Editar" no interactivo.
+- [x] La caja "Alergias y notas" reproduce el texto del prototipo y solo aparece en niños con alergia.
+- [x] La tarjeta de detalles muestra "12 mar 2022", "Soles" y "feb 2025".
+- [x] "Resumen del día" se ve con fondo `#3F362E` y "Vincular otro padre" no navega.
+- [x] "PADRES VINCULADOS" muestra a Lucía con badge ACTIVA y a Diego con PENDIENTE.
+- [x] El perfil de Valentina no muestra filas de padres y conserva "Vincular otro padre".
+- [x] Un id inexistente (p. ej. `/kids/99`) devuelve 404.
+- [x] Las pestañas se titulan "Niños · OpenDayCare" y "<Nombre> · OpenDayCare".
+- [x] Ningún componente nuevo usa `"use client"` ni handlers de eventos.
+- [x] No aparece scroll horizontal no intencional a 924×540 ni a 1440 de ancho.
+- [x] `npm run lint`, `npx tsc --noEmit` y `npm run build` terminan sin errores.
+- [x] La consola del navegador no muestra errores ni advertencias de hidratación.
 
 ## Decisiones tomadas y descartadas
 
