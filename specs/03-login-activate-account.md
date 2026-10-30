@@ -1,6 +1,6 @@
 # SPEC 03 — Login y activación de cuenta
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** SPEC 01
 > **Fecha:** 2026-10-30
 > **Objetivo:** Agregar las rutas `/login` y `/activate-account` como réplicas estáticas y fieles de `login.dc.html` y `activar-cuenta.dc.html`, sin el selector de rol Personal/Familia ni autenticación real.
