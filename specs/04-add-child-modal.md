@@ -55,24 +55,24 @@ Convenciones:
 
 ## Criterios de aceptación
 
-- [ ] El botón "Agregar niño" de `/kids` abre el modal al clicarlo; es el primer y único componente con `"use client"` de la app.
-- [ ] Con el modal cerrado, `/kids` es visualmente idéntico a SPEC 02 (mismo header, botón con el gradiente CTA, buscador, separador y grilla de ocho tarjetas).
-- [ ] El modal muestra la tarjeta de 520px con fondo `#FBF4EC`, borde `#ECE0D0`, radios 24px y la sombra del prototipo, centrada sobre un scrim translúcido.
-- [ ] El header muestra "Cancelar" (`#94887B`, peso 700, 15px), "Agregar niño" (Fredoka, peso 600, 18px) y "Guardar" (`#D9583C`, peso 800, 15px) sobre el borde inferior `#ECE0D0`.
-- [ ] NOMBRE COMPLETO muestra el placeholder "Ej. Martina López".
-- [ ] FECHA DE NACIMIENTO es un input de texto con placeholder "dd/mm/aaaa" (no `type="date"`).
-- [ ] SALA es un `<select>` nativo estilizado (`appearance-none` + chevron del prototipo) con la única opción "Soles", derivada del mock, y no muestra el chevron nativo.
-- [ ] ALERGIAS (ETIQUETAS) muestra el placeholder "Ej. Maní, Lactosa".
-- [ ] NOTAS MÉDICAS es un textarea con placeholder "Indicaciones, medicación, contactos…", altura mínima 90px y `resize: vertical`.
-- [ ] Las etiquetas usan 12px, peso 800, tracking .7px y color `#94887B`; los inputs usan borde 1.5px `#EADFD0`, fondo blanco, radios 14px, padding 13px/16px y texto de 15px.
-- [ ] El modal se cierra con "Cancelar", con "Guardar", con la tecla Esc y con el clic en el scrim.
-- [ ] "Guardar" y "Cancelar" cierran el modal sin persistir datos ni navegar a otra ruta.
-- [ ] El foco queda atrapado dentro del modal mientras está abierto, el título está vinculado con `aria-labelledby` y al cerrar el foco vuelve al botón "Agregar niño".
-- [ ] Los campos son uncontrolled: no hay estado de React para sus valores.
-- [ ] El contenido del modal hace scroll interno (sin desborde del viewport) a 924×540 y no aparece scroll horizontal.
-- [ ] `/`, `/kids/1`, `/login` y `/activate-account` se ven idénticos a sus specs, y la pestaña de `/kids` sigue titulándose "Niños · OpenDayCare".
-- [ ] `npm run lint`, `npx tsc --noEmit` y `npm run build` terminan sin errores.
-- [ ] La consola del navegador no muestra errores ni advertencias de hidratación.
+- [x] El botón "Agregar niño" de `/kids` abre el modal al clicarlo; es el primer y único componente con `"use client"` de la app.
+- [x] Con el modal cerrado, `/kids` es visualmente idéntico a SPEC 02 (mismo header, botón con el gradiente CTA, buscador, separador y grilla de ocho tarjetas).
+- [x] El modal muestra la tarjeta de 520px con fondo `#FBF4EC`, borde `#ECE0D0`, radios 24px y la sombra del prototipo, centrada sobre un scrim translúcido.
+- [x] El header muestra "Cancelar" (`#94887B`, peso 700, 15px), "Agregar niño" (Fredoka, peso 600, 18px) y "Guardar" (`#D9583C`, peso 800, 15px) sobre el borde inferior `#ECE0D0`.
+- [x] NOMBRE COMPLETO muestra el placeholder "Ej. Martina López".
+- [x] FECHA DE NACIMIENTO es un input de texto con placeholder "dd/mm/aaaa" (no `type="date"`).
+- [x] SALA es un `<select>` nativo estilizado (`appearance-none` + chevron del prototipo) con la única opción "Soles", derivada del mock, y no muestra el chevron nativo.
+- [x] ALERGIAS (ETIQUETAS) muestra el placeholder "Ej. Maní, Lactosa".
+- [x] NOTAS MÉDICAS es un textarea con placeholder "Indicaciones, medicación, contactos…", altura mínima 90px y `resize: vertical`.
+- [x] Las etiquetas usan 12px, peso 800, tracking .7px y color `#94887B`; los inputs usan borde 1.5px `#EADFD0`, fondo blanco, radios 14px, padding 13px/16px y texto de 15px.
+- [x] El modal se cierra con "Cancelar", con "Guardar", con la tecla Esc y con el clic en el scrim.
+- [x] "Guardar" y "Cancelar" cierran el modal sin persistir datos ni navegar a otra ruta.
+- [x] El foco queda atrapado dentro del modal mientras está abierto, el título está vinculado con `aria-labelledby` y al cerrar el foco vuelve al botón "Agregar niño".
+- [x] Los campos son uncontrolled: no hay estado de React para sus valores.
+- [x] El contenido del modal hace scroll interno (sin desborde del viewport) a 924×540 y no aparece scroll horizontal.
+- [x] `/`, `/kids/1`, `/login` y `/activate-account` se ven idénticos a sus specs, y la pestaña de `/kids` sigue titulándose "Niños · OpenDayCare".
+- [x] `npm run lint`, `npx tsc --noEmit` y `npm run build` terminan sin errores.
+- [x] La consola del navegador no muestra errores ni advertencias de hidratación.
 
 ## Decisiones tomadas y descartadas
 
