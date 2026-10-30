@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import AddChildDialog from "../_components/AddChildDialog";
 import ChildCard from "../_components/ChildCard";
 import Sidebar from "../_components/Sidebar";
 import { children, roomLabel } from "../_data/children";
@@ -26,24 +27,6 @@ function SearchIcon() {
   );
 }
 
-function PlusIcon() {
-  return (
-    <svg
-      width="17"
-      height="17"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="#fff"
-      strokeWidth="2.4"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M12 5v14M5 12h14" />
-    </svg>
-  );
-}
-
 export default function KidsPage() {
   return (
     <div className="flex min-h-screen bg-canvas">
@@ -59,13 +42,7 @@ export default function KidsPage() {
                 Niños
               </h1>
             </div>
-            <span
-              aria-disabled="true"
-              className="flex items-center gap-2 rounded-[14px] bg-linear-to-b from-cta-from to-cta-to px-[18px] py-[11px] text-[14.5px] font-extrabold text-white shadow-[0_8px_18px_-8px_rgb(238_129_100/0.7)]"
-            >
-              <PlusIcon />
-              Agregar niño
-            </span>
+            <AddChildDialog />
           </header>
 
           <div className="mb-[22px] flex items-center gap-[11px] rounded-[14px] border border-line bg-surface px-4 py-3">
