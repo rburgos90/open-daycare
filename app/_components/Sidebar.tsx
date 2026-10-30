@@ -136,7 +136,11 @@ const navItemClassName =
 const activeItemClassName = "bg-accent-soft text-accent font-extrabold";
 const inactiveItemClassName = "text-nav font-semibold";
 
-export default function Sidebar() {
+type SidebarProps = {
+  active: "feed" | "kids";
+};
+
+export default function Sidebar({ active }: SidebarProps) {
   return (
     <aside className="sticky top-0 flex h-screen w-[248px] flex-none flex-col border-r border-line bg-surface px-4 py-6">
       <span
@@ -167,19 +171,24 @@ export default function Sidebar() {
       <nav className="flex flex-1 flex-col gap-1">
         <Link
           href="/"
-          aria-current="page"
-          className={`${navItemClassName} ${activeItemClassName}`}
+          aria-current={active === "feed" ? "page" : undefined}
+          className={`${navItemClassName} ${
+            active === "feed" ? activeItemClassName : inactiveItemClassName
+          }`}
         >
           <HomeIcon />
           Feed
         </Link>
-        <span
-          aria-disabled="true"
-          className={`${navItemClassName} ${inactiveItemClassName}`}
+        <Link
+          href="/kids"
+          aria-current={active === "kids" ? "page" : undefined}
+          className={`${navItemClassName} ${
+            active === "kids" ? activeItemClassName : inactiveItemClassName
+          }`}
         >
           <ChildrenIcon />
           Niños
-        </span>
+        </Link>
         <span
           aria-disabled="true"
           className={`${navItemClassName} ${inactiveItemClassName}`}
