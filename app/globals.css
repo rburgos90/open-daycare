@@ -66,6 +66,13 @@
   /* Card hover */
   --color-card-hover-border: #f2a78e;
 
+  /* Auth */
+  --color-auth-bg: #fbf4ec;
+  --color-auth-input-border: #eadfd0;
+  --color-consent-bg: #fbf1d6;
+  --color-consent-fg: #8a7234;
+  --color-consent-check: #5fb97e;
+
   /* Scrollbar */
   --color-scrollbar: #e4d6c4;
 
