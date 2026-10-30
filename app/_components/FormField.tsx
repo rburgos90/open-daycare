@@ -22,7 +22,7 @@ export default function FormField({
         type={type}
         placeholder={placeholder}
         defaultValue={defaultValue}
-        className={`w-full rounded-[14px] border-[1.5px] bg-white px-4 py-[14px] text-[15px] text-ink ${inputClassName ?? ""}`}
+        className={`w-full rounded-[14px] border-[1.5px] bg-white px-4 py-[14px] text-ink ${inputClassName ?? ""}`}
       />
     </label>
   );
