@@ -1,8 +1,10 @@
+import type { ReactNode } from "react";
 import type { LinkedParent, ParentStatus } from "../_data/children";
 import Avatar from "./Avatar";
 
 type ParentListProps = {
   parents: LinkedParent[];
+  action?: ReactNode;
 };
 
 const parentStatusStyles: Record<
@@ -21,25 +23,7 @@ const parentStatusStyles: Record<
   },
 };
 
-function PlusIcon() {
-  return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M12 5v14M5 12h14" />
-    </svg>
-  );
-}
-
-export default function ParentList({ parents }: ParentListProps) {
+export default function ParentList({ parents, action }: ParentListProps) {
   return (
     <div className="flex flex-col gap-3.5">
       {parents.map((parent) => {
@@ -69,14 +53,7 @@ export default function ParentList({ parents }: ParentListProps) {
           </div>
         );
       })}
-      <span aria-disabled="true" className="flex items-center gap-3 pt-2">
-        <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full border-[1.5px] border-dashed border-[#d8cbba] text-photo-fg">
-          <PlusIcon />
-        </span>
-        <span className="text-[14.5px] font-extrabold text-accent-strong">
-          Vincular otro padre
-        </span>
-      </span>
+      {action}
     </div>
   );
 }

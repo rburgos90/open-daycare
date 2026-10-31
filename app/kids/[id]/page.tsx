@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Avatar from "../../_components/Avatar";
+import LinkParentDialog from "../../_components/LinkParentDialog";
 import ParentList from "../../_components/ParentList";
 import Sidebar from "../../_components/Sidebar";
 import { children, roomLabel } from "../../_data/children";
@@ -177,7 +178,10 @@ export default async function ChildProfilePage({
                 <div className="mb-3.5 text-[12.5px] font-extrabold tracking-[.8px] text-caption">
                   PADRES VINCULADOS
                 </div>
-                <ParentList parents={child.parents} />
+                <ParentList
+                  parents={child.parents}
+                  action={<LinkParentDialog childName={child.name} />}
+                />
               </div>
             </div>
           </div>
