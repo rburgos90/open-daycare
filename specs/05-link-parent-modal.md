@@ -82,33 +82,33 @@ Convenciones:
 
 ## Criterios de aceptación
 
-- [ ] "Vincular otro padre" es un `<button>` real, sin `aria-disabled`, y abre el modal sin navegar.
-- [ ] El modal se abre desde el perfil de los ocho niños; el subtítulo muestra el nombre completo del niño.
-- [ ] El banner muestra el nombre de pila correcto ("Mateo", "Sofía", etc.) y no un literal fijo.
-- [ ] En `/kids/4` (Valentina, sin padres) el disparador sigue visible y abre el modal.
-- [ ] El modal es el único componente con `"use client"` que se renderiza en `/kids/[id]`; `ParentList` y la página siguen siendo server components.
-- [ ] La tarjeta mide como máximo 480 px, con fondo `#FBF4EC`, borde `#ECE0D0`, radios 24 px y la sombra del prototipo, centrada sobre scrim `rgb(63 54 46 / 0.4)`.
-- [ ] El header muestra "Vincular padre" (Fredoka 18 px/600), "a {nombre completo}" (13 px, `#A89A8B`), borde inferior `#ECE0D0` y la X de 34×34 px con fondo `#F0E6D8`.
-- [ ] El header no muestra "Cancelar" ni "Guardar".
-- [ ] El banner tiene fondo `#E3ECFB`, radios 14 px, icono `#4E72C8` y texto `#3F5694` de 13.5 px.
-- [ ] NOMBRE DEL PADRE/MADRE muestra el placeholder "Ej. Diego Fernández".
-- [ ] EMAIL es `type="email"` y muestra el placeholder "correo@ejemplo.com".
-- [ ] Los tres pills tienen borde 1.5 px, radios 999 px y texto 14 px/800; "Mamá" aparece seleccionada con fondo `#CCD8F4`, borde `#9FB8EC` y texto `#4E72C8`.
-- [ ] Al elegir "Papá" o "Tutor/a" la selección cambia y queda un solo pill activo; los no seleccionados usan fondo `#FFFDF9`, borde `#ECE0D0` y texto `#6E6359`.
-- [ ] El grupo de parentesco funciona con teclado: Tab entra al grupo, las flechas cambian la opción y el anillo de foco es visible.
-- [ ] La caja de código usa fondo `#FBF1D6`, borde punteado `#E6D08A` y muestra la etiqueta "CÓDIGO DE INVITACIÓN".
-- [ ] El código "7K4P9" se muestra en Fredoka 34 px/600 con tracking de 7 px y color `#8A7234`.
-- [ ] Debajo del código se lee "Vence en 7 días" en `#A88526` de 13 px.
-- [ ] El CTA "Enviar invitación" usa el gradiente `#F4977E` → `#EE8164`, icono de avión de papel, texto blanco 15.5 px/800 y la sombra del prototipo.
-- [ ] "Enviar invitación" cierra el modal sin persistir datos, sin navegar y sin agregar una fila de padre.
-- [ ] El modal se cierra con la X, con Esc, con el clic en el scrim y con "Enviar invitación".
-- [ ] El foco queda atrapado dentro del modal; el título está vinculado con `aria-labelledby` y al cerrar el foco vuelve a "Vincular otro padre".
-- [ ] Nombre y email son uncontrolled: no hay estado de React para sus valores.
-- [ ] El cuerpo del modal hace scroll interno a 924×540 sin desbordar el viewport ni generar scroll horizontal.
-- [ ] `/kids` se ve idéntico a SPEC 02/04 y `/kids/1` solo cambia por el disparador ahora interactivo.
-- [ ] Las pestañas siguen titulándose "<Nombre> · OpenDayCare" y "Niños · OpenDayCare".
-- [ ] `npm run lint`, `npx tsc --noEmit` y `npm run build` terminan sin errores.
-- [ ] La consola del navegador no muestra errores ni advertencias de hidratación.
+- [x] "Vincular otro padre" es un `<button>` real, sin `aria-disabled`, y abre el modal sin navegar.
+- [x] El modal se abre desde el perfil de los ocho niños; el subtítulo muestra el nombre completo del niño.
+- [x] El banner muestra el nombre de pila correcto ("Mateo", "Sofía", etc.) y no un literal fijo.
+- [x] En `/kids/4` (Valentina, sin padres) el disparador sigue visible y abre el modal.
+- [x] El modal es el único componente con `"use client"` que se renderiza en `/kids/[id]`; `ParentList` y la página siguen siendo server components.
+- [x] La tarjeta mide como máximo 480 px, con fondo `#FBF4EC`, borde `#ECE0D0`, radios 24 px y la sombra del prototipo, centrada sobre scrim `rgb(63 54 46 / 0.4)`.
+- [x] El header muestra "Vincular padre" (Fredoka 18 px/600), "a {nombre completo}" (13 px, `#A89A8B`), borde inferior `#ECE0D0` y la X de 34×34 px con fondo `#F0E6D8`.
+- [x] El header no muestra "Cancelar" ni "Guardar".
+- [x] El banner tiene fondo `#E3ECFB`, radios 14 px, icono `#4E72C8` y texto `#3F5694` de 13.5 px.
+- [x] NOMBRE DEL PADRE/MADRE muestra el placeholder "Ej. Diego Fernández".
+- [x] EMAIL es `type="email"` y muestra el placeholder "correo@ejemplo.com".
+- [x] Los tres pills tienen borde 1.5 px, radios 999 px y texto 14 px/800; "Mamá" aparece seleccionada con fondo `#CCD8F4`, borde `#9FB8EC` y texto `#4E72C8`.
+- [x] Al elegir "Papá" o "Tutor/a" la selección cambia y queda un solo pill activo; los no seleccionados usan fondo `#FFFDF9`, borde `#ECE0D0` y texto `#6E6359`.
+- [x] El grupo de parentesco funciona con teclado: Tab entra al grupo, las flechas cambian la opción y el anillo de foco es visible.
+- [x] La caja de código usa fondo `#FBF1D6`, borde punteado `#E6D08A` y muestra la etiqueta "CÓDIGO DE INVITACIÓN".
+- [x] El código "7K4P9" se muestra en Fredoka 34 px/600 con tracking de 7 px y color `#8A7234`.
+- [x] Debajo del código se lee "Vence en 7 días" en `#A88526` de 13 px.
+- [x] El CTA "Enviar invitación" usa el gradiente `#F4977E` → `#EE8164`, icono de avión de papel, texto blanco 15.5 px/800 y la sombra del prototipo.
+- [x] "Enviar invitación" cierra el modal sin persistir datos, sin navegar y sin agregar una fila de padre.
+- [x] El modal se cierra con la X, con Esc, con el clic en el scrim y con "Enviar invitación".
+- [x] El foco queda atrapado dentro del modal; el título está vinculado con `aria-labelledby` y al cerrar el foco vuelve a "Vincular otro padre".
+- [x] Nombre y email son uncontrolled: no hay estado de React para sus valores.
+- [x] El cuerpo del modal hace scroll interno a 924×540 sin desbordar el viewport ni generar scroll horizontal.
+- [x] `/kids` se ve idéntico a SPEC 02/04 y `/kids/1` solo cambia por el disparador ahora interactivo.
+- [x] Las pestañas siguen titulándose "<Nombre> · OpenDayCare" y "Niños · OpenDayCare".
+- [x] `npm run lint`, `npx tsc --noEmit` y `npm run build` terminan sin errores.
+- [x] La consola del navegador no muestra errores ni advertencias de hidratación.
 
 ## Decisiones tomadas y descartadas
 
